@@ -1,0 +1,14 @@
+.container{
+    margin-top: 1%;
+    height:680px;
+    background-image: url("../assets/logo-backgroung.png");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    text-align: center;
+}
+
+.text{
+    padding-top: 16%;
+    text-align: center;
+}

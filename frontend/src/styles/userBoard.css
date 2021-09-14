@@ -1,0 +1,13 @@
+.article{
+    margin: 5% 0 10% 40%;
+    justify-content: right;
+}
+
+nav{
+    padding: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 200px;
+}
+
