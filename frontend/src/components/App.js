@@ -8,7 +8,7 @@ import CreateAccount from"../pages/signup";
 import UserBoard from"../pages/userBoard";
 
 import MultilineTextFields from "../pages/newArticle";
-import MultilineTextFieldsComment from "../pages/newComment";
+import PostComment from "../pages/newComment";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Switch>
         
         <Route path="/newArticle" component={MultilineTextFields} />
-        <Route path="/newComment" component={MultilineTextFieldsComment} />
+        <Route path="/newComment" component={PostComment} />
         <Route path="/userBoard" component={UserBoard} />
         <Route path="/login" component={ConnectForm} />
         <Route path="/signup" component={CreateAccount} />
