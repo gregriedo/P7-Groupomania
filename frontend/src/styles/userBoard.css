@@ -1,6 +1,7 @@
 .article{
-    margin: 5% 0 10% 40%;
-    justify-content: right;
+	margin-top: 10%;
+    display: flex;
+    justify-content: center;
 }
 
 nav{
@@ -10,4 +11,48 @@ nav{
 	justify-content: center;
 	width: 200px;
 }
+.deleteButton{
+	margin-left: 35%;
+	display: inline-block;
+	justify-content: right;
+}
 
+footer{
+	width: 100%;
+      bottom: 0;
+      padding: 2% 0 2% 0;
+      position: fixed;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 20px;
+      color: white;
+}
+.link{
+	float:right;
+	margin-right:70px;
+}
+.deleteButton{
+	float:left;
+  margin-left: 70px;
+}
+
+@media all and (min-width: 300px) and (max-width: 1280px){
+	footer{
+		width: 100%;
+		  bottom: 0;
+		  padding: 2% 0 2% 0;
+		  position: fixed;
+		  flex-direction: row;
+		  justify-content: space-between;
+		  font-size: 20px;
+		  color: white;
+	}
+	.link{
+		float:right;
+		margin-right:5px;
+	}
+	.deleteButton{
+		float:left;
+	  margin-left: 5px;
+	}
+}
