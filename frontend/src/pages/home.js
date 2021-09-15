@@ -13,9 +13,10 @@ const Home = () => {
           Pour cela il vous suffit simplement de vous connecter avec vos identifiants <br />
           <Link href="#/login">Ici</Link>
         </h3>
-      </div>
-      <p>
+        <p >
         Vous n'avez pas de compte ? Créez en un en cliquant</p> <Link href="#/signup">Ici</Link>
+      </div>
+      
   
     </div>
   );
