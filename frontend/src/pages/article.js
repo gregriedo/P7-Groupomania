@@ -18,7 +18,7 @@ import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 400,
   },
   media: {
     height: 0,
@@ -53,29 +53,36 @@ export default function RecipeReviewCard( {history} ) {
   const user = JSON.parse(localStorage.getItem("user"));
   
 
-  if (user) {
-    axios.defaults.headers.common["authorization"] = "Bearer " + user.token;
-  }
+
 
   useEffect(() => {
-    axios.get("http://localhost:3000/api/article/").then((response) => {
+    axios.get("http://localhost:3000/api/article/")
+    .then((response) => {
       console.log(response.data);
       setPosts(response.data);
     });
   }, []);
-  const id = localStorage.getItem('id');
-  const deletePost = (e) =>{
-    e.preventDefault();
-    axios.delete(`http://localhost:3000/api/article/${id}`)
-    .then((response) => {
-      history.push("/userBoard");
-      window.location.reload(false);
+  
+    const deletePost = () =>{
+      if(user){
+      axios.delete(`http://localhost:3000/api/article/${44}`,{
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+          'authorization': 'Bearer ' + user.token,
+        },
       })
-      .catch(function (error) {
-        console.log(error);
-      });
-     
-    }
+      .then(() => {
+        history.replace("/userBoard");
+        window.location.reload(true);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+       
+      }
+  }
+  
 
 
   return (
@@ -118,13 +125,13 @@ export default function RecipeReviewCard( {history} ) {
             >
               <ExpandMoreIcon />
               
-              
+             
 
             </IconButton>
           </CardActions>
           <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Comment />
+           <Comment />
         </CardContent>
       </Collapse>
     </Card>
