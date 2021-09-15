@@ -8,8 +8,8 @@ const articleCtrl = require('../controllers/articles.js');
 router.get('/',  articleCtrl.getAllArticle);
 router.post('/',  multer, articleCtrl.createArticle);
 router.get('/:id', articleCtrl.getOneArticle);
-router.put('/:id', auth, multer, articleCtrl.modifyArticle);
-router.delete('/:id', articleCtrl.deleteArticle);
+router.put('/:id',  multer, articleCtrl.modifyArticle);
+router.delete('/:id',  articleCtrl.deleteArticle);
 
 
 
